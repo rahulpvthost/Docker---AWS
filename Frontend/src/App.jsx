@@ -3,9 +3,22 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import {Editor} from "@monaco-editor/react";
+import { MonacoBindings } from 'y-monaco';
+import {useRef,useMemo} from 'react';
+import * as Y from 'yjs';
+import {SocketIOProvider} from 'y-socket.io';
+
 
 function App() {
-  const [count, setCount] = useState(0)
+  const editorRef = useRef(null);
+
+  
+const handleMount = (editor) => {
+  editorref.current = editor;
+
+
+}
+
 
   return (
    <>
